@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+             var k=1;
+
+            function showImage(n) {
+                document.getElementById("img1").style.borderColor = "black";
+                document.getElementById("img2").style.borderColor = "black";
+                document.getElementById("img3").style.borderColor = "black";
+                document.getElementById("img4").style.borderColor = "black";
+                document.getElementById("img5").style.borderColor = "black";
+            document.getElementById("bigimg").src="img"+n+".jpg";
+            document.getElementById("img"+n).style.borderColor = "red";
+            k=n;
+            console.log(k);
+            };
+                      
+           function changeImage() {
+                document.getElementById("img1").style.borderColor = "black";
+                document.getElementById("img2").style.borderColor = "black";
+                document.getElementById("img3").style.borderColor = "black";
+                document.getElementById("img4").style.borderColor = "black";
+                document.getElementById("img5").style.borderColor = "black";
+                document.getElementById("bigimg").src="img"+(k+1)+".jpg";
+                document.getElementById("img"+(k+1)).style.borderColor = "red";  
+                console.log(k);  
+                k!=4 ? k++ : k=0;                     
+            }
+        </script>
+    </head>
+    <body onload="showImage(1)">
+        <img id="bigimg" src="img1.jpg" border="3px" width="55%" onclick="changeImage()"/><br>
+        <img src="img1.jpg" id="img1" border="3px" width="10%" onclick="showImage(1)"/>
+        <img src="img2.jpg" id="img2" border="3px" width="10%" onclick="showImage(2)"/>
+        <img src="img3.jpg" id="img3" border="3px" width="10%" onclick="showImage(3)"/>
+        <img src="img4.jpg" id="img4" border="3px" width="10%" onclick="showImage(4)"/>
+        <img src="img5.jpg" id="img5" border="3px" width="10%" onclick="showImage(5)"/>
+    </body>
+</html>
